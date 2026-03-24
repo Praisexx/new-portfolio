@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Process | Chukwudi Praise</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a4e6ff",
+                        "primary-container": "#00d1ff",
+                        "secondary": "#bdc2ff",
+                        "tertiary": "#ffd59c",
+                        "background": "#10141a",
+                        "surface": "#10141a",
+                        "surface-container": "#1c2026",
+                        "surface-container-low": "#181c22",
+                        "surface-container-high": "#262a31",
+                        "surface-container-highest": "#31353c",
+                        "surface-variant": "#31353c",
+                        "on-surface": "#dfe2eb",
+                        "on-surface-variant": "#bbc9cf",
+                        "on-primary": "#003543",
+                        "outline": "#859399",
+                        "outline-variant": "#3c494e",
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#10141a]/80 backdrop-blur-xl border-b border-white/5">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 md:px-8 h-20">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-white font-headline">
+            Chukwudi Praise
+        </a>
+        <div class="hidden md:flex items-center gap-8 font-headline text-sm tracking-tight">
+            <a class="text-slate-400 hover:text-white transition-colors" href="index.html">Home</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="projects.html">Projects</a>
+            <a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1" href="process.html">Process</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="about.html">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="mailto:yukiwolford7@gmail.com" class="hidden md:block">
+                <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-md hover:shadow-lg transition-all">
+                    Hire Me
+                </button>
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container border-t border-outline-variant/20">
+        <div class="px-4 py-4 space-y-4">
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="index.html">Home</a>
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="projects.html">Projects</a>
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="process.html">Process</a>
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="about.html">About</a>
+            <a href="mailto:yukiwolford7@gmail.com" class="block">
+                <button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-6 py-3 rounded-md hover:shadow-lg transition-all mt-2">
+                    Hire Me
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Process Section -->
+<section class="py-32 min-h-screen pt-32">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="mb-16">
+            <p class="text-outline text-sm mb-2 font-label tracking-wider">MY APPROACH</p>
+            <h1 class="font-headline text-6xl font-bold mb-6">Development Process</h1>
+            <p class="text-outline text-lg max-w-2xl">
+                A structured, iterative approach to building high-quality web applications that deliver real value.
+            </p>
+        </div>
+
+        <div class="grid gap-8">
+            <!-- Step 1: Strategy & Planning -->
+            <div class="bg-surface-container p-8 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all group">
+                <div class="grid md:grid-cols-[auto,1fr] gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center">
+                            <span class="text-2xl font-headline font-bold text-primary">01</span>
+                        </div>
+                        <div class="w-0.5 h-full bg-outline-variant/30 mt-4 hidden md:block"></div>
+                    </div>
+                    <div>
+                        <h2 class="font-headline text-3xl font-bold mb-4">Strategy & Planning</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">
+                            Every successful project starts with a solid foundation. I begin by understanding your business goals, target audience, and technical requirements. This phase includes competitor analysis, feature prioritization, and creating a detailed project roadmap.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-primary mb-2">Discovery</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• Requirements gathering</li>
+                                    <li>• Stakeholder interviews</li>
+                                    <li>• Technical feasibility analysis</li>
+                                </ul>
+                            </div>
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-primary mb-2">Documentation</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• Project scope definition</li>
+                                    <li>• User stories & use cases</li>
+                                    <li>• Technology stack selection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Design & Prototyping -->
+            <div class="bg-surface-container p-8 rounded-xl border border-outline-variant/20 hover:border-secondary/50 transition-all group">
+                <div class="grid md:grid-cols-[auto,1fr] gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-secondary/10 border-2 border-secondary flex items-center justify-center">
+                            <span class="text-2xl font-headline font-bold text-secondary">02</span>
+                        </div>
+                        <div class="w-0.5 h-full bg-outline-variant/30 mt-4 hidden md:block"></div>
+                    </div>
+                    <div>
+                        <h2 class="font-headline text-3xl font-bold mb-4">Design & Prototyping</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">
+                            With a clear strategy in place, I move to visual design and user experience. This involves creating wireframes, interactive prototypes, and establishing a cohesive design system that aligns with your brand identity while ensuring optimal user experience.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-secondary mb-2">UI/UX Design</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• Wireframing & mockups</li>
+                                    <li>• Interactive prototypes</li>
+                                    <li>• Design system creation</li>
+                                </ul>
+                            </div>
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-secondary mb-2">User Testing</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• User flow validation</li>
+                                    <li>• Accessibility compliance</li>
+                                    <li>• Responsive design planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Development & Quality -->
+            <div class="bg-surface-container p-8 rounded-xl border border-outline-variant/20 hover:border-tertiary/50 transition-all group">
+                <div class="grid md:grid-cols-[auto,1fr] gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-tertiary/10 border-2 border-tertiary flex items-center justify-center">
+                            <span class="text-2xl font-headline font-bold text-tertiary">03</span>
+                        </div>
+                        <div class="w-0.5 h-full bg-outline-variant/30 mt-4 hidden md:block"></div>
+                    </div>
+                    <div>
+                        <h2 class="font-headline text-3xl font-bold mb-4">Development & Quality</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">
+                            Using modern technologies and best practices, I build scalable, maintainable applications. I follow test-driven development principles, implement continuous integration, and ensure code quality through regular reviews and refactoring.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-tertiary mb-2">Implementation</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• Clean, modular code</li>
+                                    <li>• API development & integration</li>
+                                    <li>• Database design & optimization</li>
+                                </ul>
+                            </div>
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-tertiary mb-2">Quality Assurance</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• Unit & integration testing</li>
+                                    <li>• Code reviews & pair programming</li>
+                                    <li>• Performance optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Testing & Deployment -->
+            <div class="bg-surface-container p-8 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all group">
+                <div class="grid md:grid-cols-[auto,1fr] gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center">
+                            <span class="text-2xl font-headline font-bold text-primary">04</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="font-headline text-3xl font-bold mb-4">Testing & Deployment</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">
+                            Before launch, I conduct comprehensive testing across devices and browsers. Once approved, I deploy using modern CI/CD pipelines with zero-downtime strategies. Post-launch, I provide monitoring, support, and continuous improvements based on real user feedback.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-primary mb-2">Testing</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• Cross-browser compatibility</li>
+                                    <li>• User acceptance testing</li>
+                                    <li>• Security audits</li>
+                                </ul>
+                            </div>
+                            <div class="bg-surface-container-high p-4 rounded-lg">
+                                <h3 class="font-headline font-bold text-primary mb-2">Launch & Support</h3>
+                                <ul class="text-on-surface-variant text-sm space-y-1">
+                                    <li>• CI/CD pipeline setup</li>
+                                    <li>• Monitoring & analytics</li>
+                                    <li>• Maintenance & updates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 text-center bg-surface-container p-12 rounded-xl border border-outline-variant/20">
+            <h2 class="font-headline text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="text-on-surface-variant text-lg mb-8 max-w-2xl mx-auto">
+                Let's discuss how my development process can bring your ideas to life with quality, efficiency, and attention to detail.
+            </p>
+            <a href="about.html">
+                <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-8 py-3 rounded-md hover:shadow-lg transition-all">
+                    Get In Touch
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 border-t border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-outline text-sm">
+                © 2024 Chukwudi Praise. All rights reserved.
+            </div>
+            <div class="flex gap-8 text-sm">
+                <a href="index.html" class="text-outline hover:text-primary transition-colors">Home</a>
+                <a href="projects.html" class="text-outline hover:text-primary transition-colors">Projects</a>
+                <a href="process.html" class="text-outline hover:text-primary transition-colors">Process</a>
+                <a href="about.html" class="text-outline hover:text-primary transition-colors">About</a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-outline text-xs">
+            Built with ❤️ using HTML, Tailwind CSS, and JavaScript
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+</script>
+</body>
+</html>

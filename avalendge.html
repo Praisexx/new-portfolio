@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Avalendge Case Study | Chukwudi Praise</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a4e6ff",
+                        "primary-container": "#00d1ff",
+                        "secondary": "#bdc2ff",
+                        "tertiary": "#ffd59c",
+                        "background": "#10141a",
+                        "surface": "#10141a",
+                        "surface-container": "#1c2026",
+                        "surface-container-low": "#181c22",
+                        "surface-container-high": "#262a31",
+                        "surface-container-highest": "#31353c",
+                        "surface-variant": "#31353c",
+                        "on-surface": "#dfe2eb",
+                        "on-surface-variant": "#bbc9cf",
+                        "on-primary": "#003543",
+                        "outline": "#859399",
+                        "outline-variant": "#3c494e",
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+
+<!-- Back Button -->
+<a href="projects.html" class="fixed top-24 left-4 md:left-8 z-40 bg-surface-container hover:bg-surface-container-high text-primary p-3 rounded-full transition-all shadow-lg group">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+</a>
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#10141a]/80 backdrop-blur-xl border-b border-white/5">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 md:px-8 h-20">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-white font-headline">
+            Chukwudi Praise
+        </a>
+        <div class="hidden md:flex items-center gap-8 font-headline text-sm tracking-tight">
+            <a class="text-slate-400 hover:text-white transition-colors" href="index.html">Home</a>
+            <a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1" href="projects.html">Projects</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="process.html">Process</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="about.html">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="mailto:yukiwolford7@gmail.com" class="hidden md:block">
+                <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-md hover:shadow-lg transition-all">
+                    Hire Me
+                </button>
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container border-t border-outline-variant/20">
+        <div class="px-4 py-4 space-y-4">
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="index.html">Home</a>
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="projects.html">Projects</a>
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="process.html">Process</a>
+            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="about.html">About</a>
+            <a href="mailto:yukiwolford7@gmail.com" class="block">
+                <button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-6 py-3 rounded-md hover:shadow-lg transition-all mt-2">
+                    Hire Me
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 max-w-7xl mx-auto px-8">
+    <div class="editorial-grid">
+        <div class="col-span-12 md:col-span-8">
+            <span class="text-outline font-mono tracking-widest uppercase mb-4 block">Case Study: Enterprise Fintech</span>
+            <h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface tracking-tighter leading-none mb-8">
+                Avalendge <span class="text-secondary">Dashboard</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl">
+                Architecting a high-performance command center for global financial monitoring and autonomous fraud detection.
+            </p>
+        </div>
+        <div class="col-span-12 md:col-span-4 flex flex-col justify-end space-y-4 border-l-4 border-secondary pl-8">
+            <div>
+                <span class="text-outline text-xs font-mono block">CLIENT</span>
+                <span class="text-on-surface font-bold">Avalendge Global</span>
+            </div>
+            <div>
+                <span class="text-outline text-xs font-mono block">ROLE</span>
+                <span class="text-on-surface font-bold">Lead Product Architect</span>
+            </div>
+            <div>
+                <span class="text-outline text-xs font-mono block">STACK</span>
+                <span class="text-on-surface font-bold text-sm">React, D3.js, WebSockets, Go</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Image -->
+<section class="w-full h-[500px] bg-surface-container-low mb-28 overflow-hidden">
+    <div class="h-full flex items-center justify-center">
+        <span class="material-symbols-outlined text-secondary text-9xl opacity-20">monitoring</span>
+    </div>
+</section>
+
+<!-- Overview & Metrics -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+    <div class="editorial-grid items-start">
+        <div class="col-span-12 md:col-span-5">
+            <h2 class="text-4xl font-headline font-bold mb-6 text-secondary">Overview</h2>
+            <p class="text-on-surface-variant leading-relaxed mb-8">
+                Avalendge required a centralized platform capable of processing over 1.2 million transactions per second. The goal was to eliminate visual noise and provide security analysts with immediate, actionable intelligence regarding global fraud patterns.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs font-bold uppercase tracking-wider">Big Data</span>
+                <span class="px-4 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs font-bold uppercase tracking-wider">Cybersecurity</span>
+                <span class="px-4 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs font-bold uppercase tracking-wider">AI/ML</span>
+            </div>
+        </div>
+        <div class="col-span-12 md:col-span-7 grid grid-cols-2 gap-4">
+            <div class="p-8 bg-surface-container-low border-b-4 border-secondary">
+                <span class="block text-tertiary text-5xl font-headline font-black mb-2">18ms</span>
+                <span class="text-outline text-sm uppercase tracking-widest font-mono">End-to-End Latency</span>
+            </div>
+            <div class="p-8 bg-surface-container-low border-b-4 border-primary">
+                <span class="block text-tertiary text-5xl font-headline font-black mb-2">99.9%</span>
+                <span class="text-outline text-sm uppercase tracking-widest font-mono">Detection Accuracy</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Challenge -->
+<section class="bg-surface-container-low py-32 mb-40">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="editorial-grid items-center">
+            <div class="col-span-12 md:col-span-6 order-2 md:order-1">
+                <div class="aspect-video bg-surface-container-high rounded-lg flex items-center justify-center p-8">
+                    <span class="material-symbols-outlined text-primary text-9xl opacity-30">analytics</span>
+                </div>
+            </div>
+            <div class="col-span-12 md:col-span-5 md:offset-1 order-1 md:order-2 mb-12 md:mb-0">
+                <h2 class="text-4xl font-headline font-bold mb-6">The Challenge: Visualizing the Infinite</h2>
+                <p class="text-on-surface-variant leading-relaxed">
+                    How do you present a million data points without overwhelming the human eye? We moved away from traditional table-based layouts toward an "Atmospheric Map" approach. By using tonal depth and primary-tinted light, we could highlight critical anomalies without intrusive pop-ups.
+                </p>
+                <div class="mt-8 space-y-4">
+                    <div class="flex items-center gap-4 text-secondary">
+                        <span class="material-symbols-outlined">data_object</span>
+                        <span class="font-mono text-sm">Complex Multi-variate data streams</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-secondary">
+                        <span class="material-symbols-outlined">query_stats</span>
+                        <span class="font-mono text-sm">Real-time graph computation (D3.js)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Solution -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+    <div class="mb-20 text-center max-w-3xl mx-auto">
+        <h2 class="text-5xl font-headline font-bold mb-6">The Solution: Real-Time Precision</h2>
+        <p class="text-on-surface-variant text-lg">A modular dashboard system that allows analysts to customize their workspace based on the severity of incoming alerts.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Global Heatmap -->
+        <div class="md:col-span-2 bg-surface-container p-8 rounded-xl border-l-2 border-primary">
+            <div class="flex justify-between items-start mb-12">
+                <div>
+                    <h3 class="text-2xl font-headline font-bold mb-2">Global Heatmap</h3>
+                    <p class="text-outline text-sm">Live transaction density monitoring</p>
+                </div>
+                <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">public</span>
+            </div>
+            <div class="h-64 bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-6xl opacity-20">travel_explore</span>
+            </div>
+        </div>
+        <!-- Rapid Response -->
+        <div class="bg-surface-container-high p-8 rounded-xl flex flex-col justify-between">
+            <div>
+                <span class="material-symbols-outlined text-tertiary mb-4">bolt</span>
+                <h3 class="text-2xl font-headline font-bold mb-2">Rapid Response</h3>
+                <p class="text-on-surface-variant text-sm">One-click account freezing and automated reporting tools integrated directly into the view.</p>
+            </div>
+        </div>
+        <!-- ML Intelligence -->
+        <div class="bg-surface-container p-8 rounded-xl">
+            <h3 class="text-xl font-headline font-bold mb-4">ML Intelligence</h3>
+            <div class="space-y-4">
+                <div class="h-1 w-full bg-surface-variant rounded-full overflow-hidden">
+                    <div class="h-full bg-primary w-[85%]"></div>
+                </div>
+                <div class="flex justify-between text-xs font-mono text-outline">
+                    <span>Confidence Score</span>
+                    <span>85%</span>
+                </div>
+                <div class="h-1 w-full bg-surface-variant rounded-full overflow-hidden">
+                    <div class="h-full bg-secondary w-[92%]"></div>
+                </div>
+                <div class="flex justify-between text-xs font-mono text-outline">
+                    <span>Pattern Match</span>
+                    <span>92%</span>
+                </div>
+            </div>
+        </div>
+        <!-- Automated Audit -->
+        <div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl flex items-center gap-8">
+            <div class="w-1/3 h-32 bg-surface-container-highest rounded flex items-center justify-center">
+                <span class="material-symbols-outlined text-tertiary text-5xl">shield_locked</span>
+            </div>
+            <div class="w-2/3">
+                <h3 class="text-2xl font-headline font-bold mb-2">Automated Audit</h3>
+                <p class="text-on-surface-variant">Every interaction is cryptographically logged, ensuring full transparency for federal compliance audits without performance degradation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Security & Compliance -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+    <div class="bg-surface p-12 md:p-24 border-t-4 border-secondary relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-12 text-[12rem] font-headline font-black text-surface-container-high opacity-10 select-none">
+            SEC
+        </div>
+        <div class="relative z-10 editorial-grid">
+            <div class="col-span-12 md:col-span-6">
+                <h2 class="text-4xl font-headline font-bold mb-8">Security & Compliance</h2>
+                <p class="text-on-surface-variant mb-8 text-lg">
+                    Operating at this scale requires more than aesthetics—it demands unwavering commitment to data integrity. Avalendge was built with SOC2-Type II architecture by default, featuring end-to-end hardware-level encryption.
+                </p>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-secondary mt-1">verified_user</span>
+                        <div>
+                            <strong class="text-on-surface block">Zero-Trust Architecture</strong>
+                            <span class="text-sm text-outline">Every API call is verified and ephemeral.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-secondary mt-1">encrypted</span>
+                        <div>
+                            <strong class="text-on-surface block">AES-256 GCM Encryption</strong>
+                            <span class="text-sm text-outline">Data at rest and in transit is fully obfuscated.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Results -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+    <h2 class="font-headline text-4xl font-bold mb-12 tracking-tight">Impact & Achievements</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-surface-container p-8 rounded-xl border-b-4 border-primary text-center">
+            <span class="block text-primary text-5xl font-headline font-black mb-2">1.2M/s</span>
+            <span class="text-outline text-sm uppercase tracking-widest font-mono">Transaction Processing</span>
+        </div>
+        <div class="bg-surface-container p-8 rounded-xl border-b-4 border-secondary text-center">
+            <span class="block text-secondary text-5xl font-headline font-black mb-2">18ms</span>
+            <span class="text-outline text-sm uppercase tracking-widest font-mono">End-to-End Latency</span>
+        </div>
+        <div class="bg-surface-container p-8 rounded-xl border-b-4 border-tertiary text-center">
+            <span class="block text-tertiary text-5xl font-headline font-black mb-2">99.9%</span>
+            <span class="text-outline text-sm uppercase tracking-widest font-mono">Detection Accuracy</span>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-32 px-8">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="font-headline text-4xl font-bold mb-6">Interested in Enterprise Solutions?</h2>
+        <p class="text-on-surface-variant text-lg mb-12 max-w-2xl mx-auto">
+            Let's discuss how I can help build high-performance fintech platforms for your organization.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="about.html" class="px-10 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-md hover:shadow-lg transition-all">
+                Get In Touch
+            </a>
+            <a href="projects.html" class="px-10 py-5 bg-transparent border border-outline-variant text-white font-bold rounded-md hover:bg-white/5 transition-all">
+                View All Projects
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 border-t border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-outline text-sm">
+                © 2024 Chukwudi Praise. All rights reserved.
+            </div>
+            <div class="flex gap-8 text-sm">
+                <a href="index.html" class="text-outline hover:text-primary transition-colors">Home</a>
+                <a href="projects.html" class="text-outline hover:text-primary transition-colors">Projects</a>
+                <a href="process.html" class="text-outline hover:text-primary transition-colors">Process</a>
+                <a href="about.html" class="text-outline hover:text-primary transition-colors">About</a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-outline text-xs">
+            Built with ❤️ using HTML, Tailwind CSS, and JavaScript
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+</script>
+</body>
+</html>
