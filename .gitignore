@@ -1,0 +1,7 @@
+
+# secrets & deps (added during Linux backup)
+.env
+.env.*
+!.env.example
+*.pem
+node_modules/
