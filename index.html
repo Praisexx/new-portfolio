@@ -1,197 +1,865 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Chukwudi Praise | Full Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#a4e6ff",
-                        "primary-container": "#00d1ff",
-                        "secondary": "#bdc2ff",
-                        "tertiary": "#ffd59c",
-                        "background": "#10141a",
-                        "surface": "#10141a",
-                        "surface-container": "#1c2026",
-                        "surface-container-low": "#181c22",
-                        "surface-container-high": "#262a31",
-                        "surface-container-highest": "#31353c",
-                        "surface-variant": "#31353c",
-                        "on-surface": "#dfe2eb",
-                        "on-surface-variant": "#bbc9cf",
-                        "on-primary": "#003543",
-                        "outline": "#859399",
-                        "outline-variant": "#3c494e",
-                    },
-                    fontFamily: {
-                        "headline": ["Space Grotesk", "sans-serif"],
-                        "body": ["Manrope", "sans-serif"],
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Manrope', sans-serif; }
-    </style>
-</head>
-<body class="bg-background text-on-surface">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chukwudi Praise — Frontend Engineer</title>
 
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-[#10141a]/80 backdrop-blur-xl border-b border-white/5">
-    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 md:px-8 h-20">
-        <a href="index.html" class="text-xl font-bold tracking-tighter text-white font-headline">
-            Chukwudi Praise
-        </a>
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center gap-8 font-headline text-sm tracking-tight">
-            <a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1" href="index.html">Home</a>
-            <a class="text-slate-400 hover:text-white transition-colors" href="projects.html">Projects</a>
-            <a class="text-slate-400 hover:text-white transition-colors" href="process.html">Process</a>
-            <a class="text-slate-400 hover:text-white transition-colors" href="about.html">About</a>
-        </div>
-        <div class="flex items-center gap-4">
-            <a href="mailto:yukiwolford7@gmail.com" class="hidden md:block">
-                <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-md hover:shadow-lg transition-all">
-                    Hire Me
-                </button>
-            </a>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface-container border-t border-outline-variant/20">
-        <div class="px-4 py-4 space-y-4">
-            <a class="block text-cyan-400 font-bold py-2" href="index.html">Home</a>
-            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="projects.html">Projects</a>
-            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="process.html">Process</a>
-            <a class="block text-slate-400 hover:text-white transition-colors py-2" href="about.html">About</a>
-            <a href="mailto:yukiwolford7@gmail.com" class="block">
-                <button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-6 py-3 rounded-md hover:shadow-lg transition-all mt-2">
-                    Hire Me
-                </button>
-            </a>
-        </div>
-    </div>
-</nav>
+<meta name="description" content="Chukwudi Praise is a Frontend Engineer building fast, scalable web experiences with React, Next.js and TypeScript. Available for remote full-time frontend roles.">
+<meta name="author" content="Chukwudi Praise">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chukwudi Praise — Frontend Engineer">
+<meta property="og:description" content="Frontend Engineer building fast, scalable web experiences with React, Next.js and TypeScript.">
+<meta property="og:locale" content="en_US">
+<!-- Set once the production domain is known:
+     <meta property="og:url" content="https://example.com/">
+     <meta property="og:image" content="https://example.com/assets/og.png"> -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chukwudi Praise — Frontend Engineer">
+<meta name="twitter:description" content="Frontend Engineer building fast, scalable web experiences with React, Next.js and TypeScript.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0b'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='14' font-weight='700' fill='%237aa2f7' text-anchor='middle'%3ECP%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
 
 <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
+/* Reveal-on-scroll is opt-in and fail-safe. The .js class enables the hidden
+   start state; if main.js never initialises, it is dropped again so content
+   can never be left invisible. */
+document.documentElement.classList.add('js');
+setTimeout(function () {
+  if (!window.__revealReady) document.documentElement.classList.remove('js');
+}, 1500);
 </script>
+</head>
+<body>
 
-<!-- Hero Section -->
-<section class="min-h-screen flex items-center pt-20">
-    <div class="max-w-7xl mx-auto px-8 py-24 w-full">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <!-- Hero Text -->
-            <div class="space-y-8">
-                <div class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium tracking-wider">
-                    FULL STACK DEVELOPER
-                </div>
-                <h1 class="font-headline text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight">
-                    I build high-<br/>
-                    performance web<br/>
-                    <span class="text-primary">apps.</span>
-                </h1>
-                <p class="text-outline text-lg leading-relaxed max-w-md">
-                    Focused Full Stack Developer experienced in creating user-centric web applications using React, Next.js, and Node.js. Delivering high-performance solutions through scalable design and clean code.
-                </p>
-                <div class="flex gap-4">
-                    <a href="projects.html">
-                        <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-8 py-3 rounded-md hover:shadow-xl transition-all">
-                            View My Work
-                        </button>
-                    </a>
-                    <a href="about.html">
-                        <button class="bg-surface-container text-primary font-bold px-8 py-3 rounded-md hover:bg-surface-container-high transition-colors">
-                            Let's Talk
-                        </button>
-                    </a>
-                </div>
-            </div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-2 gap-6">
-                <div class="bg-surface-container-low p-8 rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-colors">
-                    <div class="text-4xl font-headline font-bold text-primary mb-2">50%</div>
-                    <div class="text-outline text-sm">Faster Load Times</div>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-colors">
-                    <div class="text-4xl font-headline font-bold text-secondary mb-2">+30ms</div>
-                    <div class="text-outline text-sm">API Response Time</div>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-colors">
-                    <div class="text-4xl font-headline font-bold text-tertiary mb-2">90+</div>
-                    <div class="text-outline text-sm">Lighthouse Score</div>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-colors">
-                    <div class="text-4xl font-headline font-bold text-primary mb-2">3+</div>
-                    <div class="text-outline text-sm">Projects Completed</div>
-                </div>
-            </div>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home">Chukwudi Praise<span class="brand-mark">.</span></a>
+
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HOME ===================== -->
+  <section class="section hero" id="home" aria-labelledby="home-title">
+    <div class="container">
+      <span class="eyebrow">Frontend Engineer</span>
+      <h1 id="home-title">I build fast, scalable web experiences with React, Next.js and TypeScript.</h1>
+      <p class="hero-copy">
+        I&rsquo;m a Frontend Engineer with approximately five years of software engineering
+        experience. With a full-stack background, I focus on building responsive,
+        maintainable interfaces and reliable product experiences.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#experience">
+          View Experience <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="btn btn-secondary" href="#contact">
+          Get in Touch <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <dl class="credibility">
+        <div>
+          <dt>~5 years</dt>
+          <dd>Software engineering experience</dd>
         </div>
-
-        <!-- Tech Stack -->
-        <div class="mt-20">
-            <p class="text-outline text-sm mb-4">TECHNICAL ARSENAL</p>
-            <div class="flex flex-wrap gap-3">
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">React</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Next.js</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Node.js</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Nest.js</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">TypeScript</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Tailwind CSS</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">PostgreSQL</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">MongoDB</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Express.js</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">GraphQL</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">REST APIs</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Git</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Docker</span>
-                <span class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-sm">Python</span>
-            </div>
+        <div>
+          <dt>React &middot; Next.js &middot; TypeScript</dt>
+          <dd>Core frontend stack</dd>
         </div>
+        <div>
+          <dt>Frontend focus, full-stack range</dt>
+          <dd>Comfortable owning a feature end to end</dd>
+        </div>
+        <div>
+          <dt>Remote-ready</dt>
+          <dd>Product engineering</dd>
+        </div>
+      </dl>
     </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="py-12 border-t border-outline-variant/20">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-outline text-sm">
-                © 2024 Chukwudi Praise. All rights reserved.
-            </div>
-            <div class="flex gap-8 text-sm">
-                <a href="index.html" class="text-outline hover:text-primary transition-colors">Home</a>
-                <a href="projects.html" class="text-outline hover:text-primary transition-colors">Projects</a>
-                <a href="process.html" class="text-outline hover:text-primary transition-colors">Process</a>
-                <a href="about.html" class="text-outline hover:text-primary transition-colors">About</a>
-            </div>
-        </div>
-        <div class="text-center mt-8 text-outline text-xs">
-            Built with ❤️ using HTML, Tailwind CSS, and JavaScript
-        </div>
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="section" id="experience" aria-labelledby="experience-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Experience</span>
+        <h2 id="experience-title">Where I&rsquo;ve worked</h2>
+        <p class="lead">
+          Roles are listed most recent first. Client and product names are withheld
+          under confidentiality.
+        </p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <div class="timeline-head">
+            <h3>Peach Blossom</h3>
+            <span class="timeline-date">2025 &ndash; Present</span>
+          </div>
+          <span class="timeline-role">Full Stack Developer</span>
+          <p>
+            Full-stack development across frontend and backend. I lead on the user-facing
+            interface layer and also build the services behind it.
+          </p>
+          <details class="disclosure role-disclosure" open>
+            <summary>Nine highlights <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <ul class="role-points">
+            <li>
+              Built the platform-admin, organisation-admin and teacher surfaces of a
+              multi-tenant product in Next.js and TypeScript &mdash; dashboards, paginated
+              tables, multi-step creation flows, subscriptions and settings.
+            </li>
+            <li>
+              Designed and unit-tested a headless state machine for a multi-phase guided
+              session, keeping the transition rules out of the component tree.
+            </li>
+            <li>
+              Built a reusable SVG chart set for the reporting views, computing scales and
+              arc geometry directly rather than adding a charting dependency.
+            </li>
+            <li>
+              Built the authentication interface across four user roles, including a custom
+              one-time-code input and a multi-step password recovery journey.
+            </li>
+            <li>
+              Implemented twenty-two typed hooks in the shared server-state layer, following
+              the cache-key conventions the wider team builds on.
+            </li>
+            <li>
+              Scaffolded a NestJS service and integrated bot-protection verification from
+              client token through to server-side validation.
+            </li>
+            <li>
+              Implemented recurring subscription billing with Stripe on a business-services
+              site, and fixed a misconfiguration that exposed a server-side module as a
+              publicly served file.
+            </li>
+            <li>
+              Built an agent-facing vertical inside a large established React product &mdash;
+              authentication, dashboard, referral, withdrawals and ticket purchase &mdash;
+              and redesigned those surfaces for mobile.
+            </li>
+            <li>
+              Migrated agent, transaction and listing screens off a legacy data layer onto
+              generated typed API hooks, keeping the app booting throughout the transition.
+            </li>
+            </ul>
+          </details>
+          <ul class="tag-row">
+            <li class="tag">Next.js</li>
+            <li class="tag">React</li>
+            <li class="tag">TypeScript</li>
+            <li class="tag">Tailwind CSS</li>
+            <li class="tag">TanStack Query</li>
+            <li class="tag">NestJS</li>
+          </ul>
+        </li>
+
+        <li class="timeline-item reveal">
+          <div class="timeline-head">
+            <h3>Magnus Studios</h3>
+            <span class="timeline-date">2023 &ndash; 2025</span>
+          </div>
+          <span class="timeline-role">Full Stack Developer</span>
+          <p>
+            My longest continuous company engagement. Full-stack development across frontend
+            and backend, with sole ownership of the client application on the platform below.
+          </p>
+          <details class="disclosure role-disclosure">
+            <summary>Five highlights <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <ul class="role-points">
+            <li>
+              Sole frontend engineer on a commerce and collaboration platform, building the
+              entire client application in React and TypeScript &mdash; marketplace and
+              listing flows, cart and checkout, escrow, project groups, and role-gated
+              administrative screens.
+            </li>
+            <li>
+              Designed and implemented the application&rsquo;s API service layer, handling
+              bearer-token authentication and client-side response caching behind a single
+              interface the rest of the codebase consumed.
+            </li>
+            <li>
+              Internationalised the product across four locales, structuring the translation
+              layer so new copy and new languages could be added without touching components.
+            </li>
+            <li>
+              Established the component system on CSS-in-JS design tokens, keeping spacing,
+              colour and typography consistent as the surface area grew.
+            </li>
+            <li>
+              Built the administrative analytics screens, including the charted reporting
+              views used to review platform activity.
+            </li>
+            </ul>
+          </details>
+          <ul class="tag-row">
+            <li class="tag">React</li>
+            <li class="tag">TypeScript</li>
+            <li class="tag">Vite</li>
+            <li class="tag">React Router</li>
+            <li class="tag">CSS-in-JS</li>
+            <li class="tag">i18next</li>
+          </ul>
+        </li>
+
+        <li class="timeline-item reveal">
+          <div class="timeline-head">
+            <h3>Freelance / Contract Developer</h3>
+            <span class="timeline-date">2021 &ndash; 2023</span>
+          </div>
+          <span class="timeline-role">Independent</span>
+          <p>
+            Multiple freelance and contract software engagements across web and AI work.
+            Client names are withheld pending disclosure approval.
+          </p>
+          <details class="disclosure role-disclosure">
+            <summary>Three highlights <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <ul class="role-points">
+            <li>
+              Worked on AI model training and modelling pipelines using real-world data,
+              including training and refining the language-model component responsible for
+              understanding inputs and generating responses.
+            </li>
+            <li>
+              Prepared and worked with real-world datasets for model training, shaping the
+              data that went into each training cycle.
+            </li>
+            <li>
+              Evaluated model behaviour across training iterations, improving how the system
+              interpreted inputs and the appropriateness of its responses.
+            </li>
+            </ul>
+          </details>
+          <ul class="tag-row">
+            <li class="tag">AI model training</li>
+            <li class="tag">AI modelling</li>
+            <li class="tag">Model evaluation</li>
+            <li class="tag">Contract</li>
+          </ul>
+        </li>
+      </ol>
     </div>
+  </section>
+
+  <!-- ===================== IMPACT ===================== -->
+  <section class="section" id="impact" aria-labelledby="impact-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Impact</span>
+        <h2 id="impact-title">Selected work</h2>
+        <p class="lead">
+          Eight pieces of work described by the engineering problem rather than the product.
+          Client, product and repository names are withheld under confidentiality.
+        </p>
+      </div>
+
+      <p class="notice reveal">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="10" rx="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <span>
+          Each example below describes work I authored personally. Where a codebase was
+          shared with a team, the scope stated is my own contribution, not the team&rsquo;s.
+        </span>
+      </p>
+
+      <div class="work-grid">
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">Education platform &middot; Architecture</span>
+                <span class="work-title">Tested state machine for a multi-phase session flow</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              A guided multi-phase learning session had rules about which step could follow
+              which. Left in the components, that logic spreads across the render tree as
+              conditionals and becomes impossible to test or reason about.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Designed the flow as a headless, framework-independent state machine with a
+              typed phase union and explicit transition guards, then wrote its unit test
+              suite. Illegal transitions throw rather than putting the session into an
+              undefined state.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              The session rules live in one tested module instead of the component tree, so
+              the interface renders state rather than arbitrating it, and the invariants are
+              enforced in code rather than by convention.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">TypeScript</li>
+              <li class="tag">Vitest</li>
+              <li class="tag">React</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">B2B SaaS &middot; Admin interfaces</span>
+                <span class="work-title">Admin surfaces for three distinct user roles</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              A multi-tenant platform needed distinct surfaces for platform operators,
+              organisation administrators and teaching staff, each covering dense tabular
+              data, multi-step creation flows and subscription management.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Built those surfaces in the Next.js App Router: dashboards, paginated entity
+              tables, detail views, creation modals, plan and subscription screens, profile
+              and settings. Designed the empty and error states alongside the populated ones.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              I own these modules end to end, and the shared table, pagination and modal
+              components they introduced are reused across all three role surfaces.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">Next.js</li>
+              <li class="tag">React</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Tailwind CSS</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">Analytics dashboards &middot; Data visualisation</span>
+                <span class="work-title">SVG chart set built without a charting library</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              Reporting screens needed line, donut and bar charts. Pulling in a charting
+              library would have added a dependency for a small, well-defined set of shapes.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Built the charts directly in SVG &mdash; deriving scale functions, grid lines and
+              donut arc geometry from the data &mdash; as reusable components with typed props
+              for series and colour. Each chart scales with its container via
+              <code>viewBox</code> and exposes an accessible name.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              The application ships its reporting views with no charting dependency, and every
+              chart is announced to assistive technology instead of being an unlabelled graphic.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">SVG</li>
+              <li class="tag">React</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Accessibility</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">Client platform &middot; Authentication</span>
+                <span class="work-title">Authentication interface across four user roles</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              Four distinct user roles each needed their own entry path &mdash; registration,
+              sign-in, email confirmation and a multi-step password recovery journey &mdash;
+              without four divergent implementations of the same forms.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Built the authentication interface across all four roles using route groups,
+              with shared form components for login, registration, verification and password
+              reset. Wrote a custom one-time-code input handling focus movement, paste and
+              backspace, plus a drag-and-drop upload component.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              The four role journeys share one set of validated form components, and invalid
+              fields are marked for assistive technology rather than signalled by colour alone.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">Next.js</li>
+              <li class="tag">React Hook Form</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Accessibility</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">Team codebase &middot; Server state</span>
+                <span class="work-title">Twenty-two typed hooks in a shared data layer</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              A shared data-fetching layer had to cover invitations, user administration,
+              streak tracking and profile mutations, with cache behaviour consistent enough
+              that several engineers could extend it without stepping on each other.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Implemented twenty-two typed query and mutation hooks in that layer, covering
+              the invitation lifecycle, cross-role user listings, streak logic and profile,
+              notification and image-upload mutations, following the shared key conventions.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              Those hooks became part of the layer the wider team builds on, and later
+              contributors extended the same conventions rather than introducing a second
+              fetching pattern.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">TanStack Query</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Axios</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">Financial interface &middot; Sole author</span>
+                <span class="work-title">Financial analysis product built end to end</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              A financial analysis tool accepted data as spreadsheets, CSV exports and pasted
+              text. For a finance audience the interface can tolerate rough edges but must
+              never present a total it cannot stand behind.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Built the product end to end as sole author: the React interface with charted
+              reporting and in-browser spreadsheet parsing, and the Python service behind it.
+              Made the ingestion path normalise every input format to one representation, and
+              gave the interface an explicit state for figures that could not be parsed.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              Unparseable input surfaces as a stated failure in the interface rather than a
+              silently wrong total &mdash; the behaviour that mattered most to the audience.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">React</li>
+              <li class="tag">Recharts</li>
+              <li class="tag">Vite</li>
+              <li class="tag">FastAPI</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">AI system &middot; Model training</span>
+                <span class="work-title">Training the language-model component on real-world data</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              The language-model component of an AI system &mdash; the part responsible for
+              interpreting what a user asked and producing a useful reply &mdash; had to work
+              against messy real-world data rather than clean examples.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Worked on the model training and modelling pipelines, preparing and shaping the
+              real-world datasets that fed each training cycle, and training and refining the
+              language-model component itself.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              Model behaviour was assessed across successive training iterations, improving
+              how the system interpreted inputs and how appropriate its responses were.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">AI model training</li>
+              <li class="tag">AI modelling</li>
+              <li class="tag">Model evaluation</li>
+              <li class="tag">Real-world datasets</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+        <article class="work-card reveal">
+          <details class="disclosure">
+            <summary>
+              <span class="summary-text">
+                <span class="work-category">Community directory &middot; Full-stack</span>
+                <span class="work-title">Directory platform written end to end, solo</span>
+              </span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+          <dl>
+            <dt>Problem</dt>
+            <dd>
+              A searchable directory needed public browsing, member-submitted entries with
+              image uploads, and an administrative side to review them &mdash; with no one
+              else on the project to hand any layer to.
+            </dd>
+            <dt>Contribution</dt>
+            <dd>
+              Sole author across the whole stack: the server-rendered views, the Express
+              application structured into controllers, models, routes and middleware, the
+              relational schema and its migrations, session-based authentication with hashed
+              passwords, and image upload with server-side processing.
+            </dd>
+            <dt>Outcome</dt>
+            <dd>
+              Shipped as one coherent codebase, including the migration and import tooling
+              needed to move it onto a revised schema without losing existing data.
+            </dd>
+          </dl>
+          <div class="work-tech">
+            <span class="work-tech-label">Technology</span>
+            <ul class="tag-row">
+              <li class="tag">Node.js</li>
+              <li class="tag">Express</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">Server-rendered views</li>
+            </ul>
+          </div>
+          </details>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section" id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Skills</span>
+        <h2 id="skills-title">What I work with</h2>
+        <p class="lead">
+          Technologies I have used in delivered work. No proficiency bars &mdash; happy to
+          talk through any of these in depth.
+        </p>
+      </div>
+
+      <div class="skill-group reveal">
+        <h3>Core frontend</h3>
+        <ul class="chip-row">
+          <li class="chip">React</li>
+          <li class="chip">Next.js</li>
+          <li class="chip">TypeScript</li>
+          <li class="chip">JavaScript</li>
+          <li class="chip">HTML</li>
+          <li class="chip">CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <h3>Frontend libraries &amp; tooling</h3>
+        <ul class="chip-row">
+          <li class="chip">Tailwind CSS</li>
+          <li class="chip">TanStack Query</li>
+          <li class="chip">React Hook Form</li>
+          <li class="chip">Zod</li>
+          <li class="chip">Zustand</li>
+          <li class="chip">React Router</li>
+          <li class="chip">Axios</li>
+          <li class="chip">Recharts</li>
+          <li class="chip">SVG data visualisation</li>
+          <li class="chip">CSS-in-JS</li>
+          <li class="chip">i18next</li>
+          <li class="chip">Vite</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <h3>UI engineering &amp; quality</h3>
+        <ul class="chip-row">
+          <li class="chip">Responsive UI</li>
+          <li class="chip">Component architecture</li>
+          <li class="chip">Accessibility (ARIA)</li>
+          <li class="chip">Frontend testing (Vitest)</li>
+          <li class="chip">Maintainability</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <h3>Backend &amp; data <span class="skill-note">&mdash; where I work beyond the interface</span></h3>
+        <ul class="chip-row">
+          <li class="chip">Node.js</li>
+          <li class="chip">Express</li>
+          <li class="chip">NestJS</li>
+          <li class="chip">FastAPI</li>
+          <li class="chip">PostgreSQL</li>
+          <li class="chip">Prisma</li>
+          <li class="chip">SQLAlchemy</li>
+          <li class="chip">REST APIs</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <h3>Platform &amp; tools</h3>
+        <ul class="chip-row">
+          <li class="chip">Git</li>
+          <li class="chip">Docker</li>
+          <li class="chip">Stripe</li>
+          <li class="chip">Supabase</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="section" id="process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Process</span>
+        <h2 id="process-title">How I build</h2>
+        <p class="lead">
+          A practical sequence rather than a formal methodology.
+        </p>
+      </div>
+
+      <ol class="process-list">
+        <li class="reveal">
+          <div>
+            <h3>Understand the product need</h3>
+            <p>
+              Start with what the product has to do and who it is for, so the interface is
+              built around real requirements instead of assumptions.
+            </p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div>
+            <h3>Plan the frontend architecture</h3>
+            <p>
+              Decide how components, state and data flow are structured before writing
+              feature code, so the shape of the codebase is deliberate rather than accidental.
+            </p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div>
+            <h3>Build responsive interfaces</h3>
+            <p>
+              Implement the UI to work across the full range of screen sizes, using semantic
+              markup and accessible interaction patterns.
+            </p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div>
+            <h3>Integrate APIs and application behaviour</h3>
+            <p>
+              Connect the interface to real services and handle the states that come with
+              them &mdash; loading, empty, error and success.
+            </p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div>
+            <h3>Test, refine, and maintain</h3>
+            <p>
+              Check the result under real conditions, fix what does not hold up, and keep the
+              code in a state that is straightforward to return to later.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About</span>
+        <h2 id="about-title">A little more context</h2>
+      </div>
+
+      <div class="about-body reveal">
+        <p>
+          Chukwudi Praise is a Frontend Engineer working primarily in React, Next.js and
+          TypeScript, with a full-stack engineering background. His work centres on
+          responsive interfaces, frontend architecture that stays maintainable as a product
+          grows, applications connected to real APIs, and product behaviour that holds up
+          once it meets real data.
+        </p>
+        <p>
+          In practice that means keeping business rules out of the render tree where a tested
+          module serves better, designing empty and error states alongside the populated ones,
+          and treating accessibility as part of building a component rather than a later pass.
+        </p>
+        <p>
+          The full-stack background is deliberate, and it isn&rsquo;t theoretical. I have
+          scaffolded services in NestJS, built APIs in FastAPI and Express, designed relational
+          schemas and their migrations, and shipped products where I wrote both the interface
+          and everything behind it. That makes it easier to work across API boundaries, agree
+          on data shapes early, and catch integration problems before they reach the interface.
+        </p>
+        <p>
+          He is currently focused on remote frontend engineering roles where interface quality
+          and long-term maintainability are taken seriously.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h2 id="contact-title">Get in touch</h2>
+      </div>
+
+      <div class="reveal">
+        <p class="availability">
+          <span class="dot" aria-hidden="true"></span>
+          Available for remote full-time frontend roles
+        </p>
+
+        <p class="lead">
+          I&rsquo;m open to remote full-time Frontend Engineer, React and Next.js roles.
+          Email is the most reliable way to reach me.
+        </p>
+
+        <a class="contact-email" href="mailto:cpraise142@gmail.com">cpraise142@gmail.com</a>
+
+        <div class="contact-links">
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/praise-chukwudi-598b61221/"
+             target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/Praisexx"
+             target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5C5.73.5.9 5.34.9 11.6c0 4.9 3.18 9.06 7.6 10.53.56.1.76-.24.76-.53l-.01-2.07c-3.1.67-3.75-1.3-3.75-1.3-.5-1.29-1.24-1.64-1.24-1.64-1.02-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.72 2.63 1.22 3.27.94.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.52 0-1.22.43-2.21 1.14-2.99-.11-.28-.5-1.42.11-2.95 0 0 .93-.3 3.05 1.14a10.5 10.5 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.71.78 1.14 1.77 1.14 2.99 0 4.29-2.6 5.23-5.09 5.51.4.35.76 1.03.76 2.08l-.01 3.08c0 .3.2.64.77.53a11.11 11.11 0 0 0 7.59-10.53C23.1 5.34 18.27.5 12 .5z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Chukwudi Praise</span>
+    <span>Built with semantic HTML and CSS. No frameworks.</span>
+    <a href="#home">Back to top &uarr;</a>
+  </div>
 </footer>
 
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
